@@ -44,7 +44,7 @@ Also try the failures your screen must handle:
 - ask for `products/99999` to get a **404**,
 - sign out, then call `me` to get a **401**.
 
-> Tip: save the requests in a Postman **collection** called "Starter Kit", and put `http://localhost:8000/api` in a collection variable `{{baseUrl}}`.
+> Tip: save the requests in a Postman **collection** called "Simple Boilerplate", and put `http://localhost:8000/api` in a collection variable `{{baseUrl}}`.
 
 ## curl (from a terminal)
 

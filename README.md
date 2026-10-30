@@ -1,6 +1,6 @@
-# Starter Kit API
+# Simple Boilerplate API
 
-The backend for the **Starter Kit** app (the React app is in the `starter-kit` folder next to this one).
+The backend for the **Simple Boilerplate** app (the React app is in the `fe-simple-boilerplate` folder next to this one).
 It uses the same setup as Navitrack, kept small so it is easy to learn from.
 
 | What | Used for |
@@ -23,7 +23,7 @@ cp .env.example .env          # Windows cmd: copy .env.example .env
 php artisan key:generate
 ```
 
-Create an empty MySQL database called `starter_kit` (in HeidiSQL, phpMyAdmin, or `mysql -uroot -e "CREATE DATABASE starter_kit"`).
+Create an empty MySQL database called `simple_boilerplate` (in HeidiSQL, phpMyAdmin, or `mysql -uroot -e "CREATE DATABASE simple_boilerplate"`).
 If your MySQL user is not `root` with no password, change `DB_USERNAME` / `DB_PASSWORD` in `.env`.
 
 ```bash

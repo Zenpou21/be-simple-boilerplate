@@ -17,8 +17,8 @@ Check: `php -v` should say 8.1 or newer. To switch versions, right-click Laragon
 
 Laragon's MySQL user is `root` with no password, which matches `.env.example`.
 
-- **HeidiSQL:** click **Database** in Laragon, connect, right-click the server → **Create new** → **Database** → `starter_kit`, collation `utf8mb4_unicode_ci`.
-- **Or in the terminal:** `mysql -uroot -e "CREATE DATABASE starter_kit CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"`
+- **HeidiSQL:** click **Database** in Laragon, connect, right-click the server → **Create new** → **Database** → `simple_boilerplate`, collation `utf8mb4_unicode_ci`.
+- **Or in the terminal:** `mysql -uroot -e "CREATE DATABASE simple_boilerplate CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"`
 
 Then `php artisan migrate --seed` creates the tables.
 
@@ -28,14 +28,14 @@ Then `php artisan migrate --seed` creates the tables.
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=starter_kit
+DB_DATABASE=simple_boilerplate
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
 ## Looking at the data
 
-In HeidiSQL, open `starter_kit` → a table → the **Data** tab. You can also run SQL in the **Query** tab:
+In HeidiSQL, open `simple_boilerplate` → a table → the **Data** tab. You can also run SQL in the **Query** tab:
 
 ```sql
 SELECT code, name, stock FROM products WHERE stock = 0;
@@ -56,6 +56,6 @@ The rest of the setup is the same.
 | Symptom | Fix |
 | --- | --- |
 | `SQLSTATE[HY000] [2002] No connection could be made` | MySQL isn't running: Laragon → Start All |
-| `Unknown database 'starter_kit'` | create the database (above) |
+| `Unknown database 'simple_boilerplate'` | create the database (above) |
 | `Access denied for user 'root'` | the password in `.env` doesn't match your MySQL |
 | `Base table or view already exists` | the table is there from an earlier try: `php artisan migrate:fresh --seed` |
